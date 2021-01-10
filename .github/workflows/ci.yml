@@ -18,7 +18,7 @@ jobs:
     - name: Install Python dependencies
       run: pip3 install -r requirements.txt
     - name: Run black
-      run: black your_cli_tool/*.py
+      run: python3 -m black your_cli_tool/*.py
     - name: Run tox
       run: tox
 
