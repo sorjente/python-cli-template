@@ -20,7 +20,7 @@ jobs:
     - name: Run black
       run: python3 -m black your_cli_tool/*.py
     - name: Run tox
-      run: tox
+      run: python3 -m tox
 
 
   macos-build:
