@@ -9,9 +9,6 @@ on:
 jobs:
   ubuntu-build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
     steps:
     - uses: actions/checkout@v2
     - name: Install setuptools
@@ -28,9 +25,6 @@ jobs:
 
   macos-build:
     runs-on: macos-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
     steps:
     - uses: actions/checkout@v2
     - name: Install Python dependencies
