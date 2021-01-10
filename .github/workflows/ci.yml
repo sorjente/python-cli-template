@@ -7,10 +7,22 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  ubuntu-build:
     runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install setuptools
+      run: sudo apt-get install python3-setuptools
+    - name: Install Python dependencies
+      run: pip3 install -r requirements.txt
+    - name: Run black
+      run: black your_cli_tool/*.py
+    - name: Run tox
+      run: tox
 
+
+  macos-build:
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install Python dependencies
