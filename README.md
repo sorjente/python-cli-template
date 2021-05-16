@@ -1,6 +1,6 @@
 # Template for CLI tools in Python
 
-This is a basic template for a CLI toom made with Python. It contains all the necessary
+This is a basic template for a CLI tool made with Python. It contains all the necessary
 tools for unit testing and code coverage.
 
 ## Dependencies

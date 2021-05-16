@@ -23,7 +23,7 @@ setuptools.setup(
     include_package_data=True,
     entry_points={
         "console_scripts": [
-            "your_cli_tool = your_cli_tool.__main__:main",
+            "your_cli_tool = your_cli_tool.__main__:your_cli_tool_main",
         ],
     },
     python_requires=">=3.6",
