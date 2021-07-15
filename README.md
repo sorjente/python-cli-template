@@ -40,5 +40,29 @@ Once that is all done, then you can start using your project! To test and measur
 coverage, you can run:
 
 ```text
-$ tox
+$ tox -s
 ```
+
+## Uploading coverage reports to CodeCov
+
+If you wish to upload coverage reports to CodeCov (which is what the CI attempts to do
+by default), you need to set your `CODECOV_TOKEN` in the
+[repo secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+
+By default, the coverage report generated in the Ubuntu run for Python 3.9 will be
+uploaded, as you can see in the `ci.yaml` file:
+
+```yaml
+- name: Upload coverage report
+  if: ${{ matrix.os-name == 'ubuntu-latest' && matrix.python-version == '3.9' }}
+  uses: codecov/codecov-action@v1
+```
+
+## Publishing a release
+
+You can automatically publish a release via the "Publish" GitHub action. First, you need
+to set your PyPi token in the
+[repo secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) via the
+`PYPI_API_TOKEN`. Then, you can simply publish a release from the GitHub interface, and
+it will automatically trigger the Publish action, which will in turn upload the new
+release to PyPi.

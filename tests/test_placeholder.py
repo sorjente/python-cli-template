@@ -8,7 +8,7 @@ from your_cli_tool.definitions import __version__
 def test_tool_main():
     # Call your tool's main function
     res = your_cli_tool_main()
-    assert res == None
+    assert res is None
 
 
 def test_tool_version():
