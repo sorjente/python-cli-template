@@ -1,5 +1,8 @@
 # Template for CLI tools in Python
 
+![CI](https://github.com/sorjente/python-cli-template/workflows/CI/badge.svg)
+![codecov](https://codecov.io/gh/sorjente/python-cli-template/branch/master/graph/badge.svg)
+
 This is a basic template for a CLI tool made with Python. It contains all the necessary
 tools for unit testing and code coverage.
 
